@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send USDT - BEP20</title>
+</head>
+<body style="text-align:center; font-family:sans-serif">
+  <h1>🔐 Secure USDT Transfer</h1>
+  <p>Recipient Wallet: <b id="receiver"></b></p>
+  <p>Enter amount to send:</p>
+  <input type="number" id="amount" placeholder="USDT Amount" />
+  <br><br>
+  <button onclick="connect()">Send USDT</button>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const address = params.get("address");
+    document.getElementById("receiver").innerText = address;
+
+    async function connect() {
+      alert("This is a fake dApp for educational use only.\nDo NOT approve real tokens.");
+      // Later: Add WalletConnect or MetaMask simulation here
+    }
+  </script>
+</body>
+</html>
